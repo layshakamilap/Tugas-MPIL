@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Contoh Object</title>
+</head>
+<body>
+  <h2>Contoh Object Student</h2>
+  <pre id="output"></pre>
+
+  <script>
+    let student = {
+      nama: "Anna",
+      umur: 16,
+      hobby: "Voli",
+      sayHello: function () {
+        return "Halo, nama saya " + this.nama;
+      }
+    };
+
+    let text = "";
+    text += student.sayHello() + "\n";
+    text += "Umur saya adalah " + student.umur + " tahun\n";
+    text += "Hobby saya adalah " + student.hobby;
+
+    document.getElementById("output").innerText = text;
+  </script>
+</body>
+</html>
